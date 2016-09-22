@@ -6,6 +6,9 @@ var RateLimiter = function () {
 
   var cache_,windwms_,rate_,self = this;
   
+  // default is to use the libraries cache
+  cache_ = CacheService.getScriptCache();
+  
   /**
    * the cache to use
    * @param {CacheService} cache the cache to use
