@@ -1,5 +1,5 @@
 # Google Apps Script Project: rateLimiterExample
-This repo (rateLimiterExample) was automatically updated on 16 September 2016 12:52:10 BST by GasGit
+This repo (rateLimiterExample) was automatically updated on 21 September 2016 18:06:29 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project rateLimiterExample
