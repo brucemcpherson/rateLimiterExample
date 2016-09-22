@@ -1,16 +1,15 @@
 function testLimiter () {
 
-  // a window of 5 seconds
+  // a window of 10 seconds
   // rate limit of 1 per second
   var limiter = new RateLimiter()
-  .setCache (CacheService.getScriptCache())
-  .setWindow(5000)
-  .setRate(5);
+  .setWindow(10000)
+  .setRate(10);
   
   var identity = "bruce";
   
   // bust it
-  for (var i=0 ; i < 12 ; i++) {
+  for (var i=0 ; i < 15 ; i++) {
     if (!limiter.useOne(identity)) {
       Logger.log('no quota for ' + i);
     }
@@ -23,7 +22,7 @@ function testLimiter () {
   
   // sleep for 1 secs between each one
   var start = new Date().getTime();
-  for (var i=0 ; i < 12 ; i++) {
+  for (var i=0 ; i < 15 ; i++) {
     if (!limiter.useOne(identity)) {
       Logger.log('slept..no quota for ' + i);
     }
@@ -38,7 +37,7 @@ function testLimiter () {
   
   // use back off
   var start = new Date().getTime();
-  for (var i=0 ; i < 12 ; i++) {
+  for (var i=0 ; i < 15 ; i++) {
     cUseful.Utils.expBackoff (function () {
       if (!limiter.useOne(identity)) throw ('Exception: Service invoked too many times');
       // simulate some work
